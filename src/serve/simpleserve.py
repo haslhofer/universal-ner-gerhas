@@ -1,8 +1,13 @@
-from flask import Flask, request
+import fire
 from vllm import LLM
 from transformers import LlamaTokenizer
-
 from .inference import inference
+
+from flask import Flask, request
+
+
+
+
 
 model_path = "Universal-NER/UniNER-7B-type"
 max_new_tokens = 256
