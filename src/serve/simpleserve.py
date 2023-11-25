@@ -19,6 +19,8 @@ def process_data():
     param2 = request.args.get('param2')
 
     if param1 is not None and param2 is not None:
+        text = param1
+        entity_type = param2
 
         if len(tokenizer(text + entity_type)['input_ids']) > max_input_length:
             print(f"Error: Input is too long. Maximum number of tokens for input and entity type is {max_input_length} tokens.")
